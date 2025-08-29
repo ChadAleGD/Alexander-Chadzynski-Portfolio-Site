@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <title>Bound Exodus</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS (handles layout and style) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+        crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+
+<body class="bg-dark">
+    <div class="container text-white">
+
+        <div class="mt-3">
+            <a href="index.html" class="btn btn-primary text-white" style="background-color: rgb(76,20,128); border-color: rgb(76,20,128); font-weight: 500;">
+                Back to Home</a>
+        </div>
+
+
+        <h1 class="title mt-5">Bound Exodus</h1>
+        <hr class="navbar-break-bar">
+
+        <h5 class="mt-5 mb-3">
+            Bound Exodus is an RPG inspired game that enhances combat through a dynamic execution system.
+        </h5>
+
+
+        <h5>
+            This project introduces a number of concepts such as runtime dynamism, procedural map generation,
+            and heuristic based AI.
+        </h5>
+
+
+        <!--Dynamic Execution System-->
+        <div class="card mt-5 text-white" style="background-color: rgb(76,20,128); border-color: rgb(76,20,128);">
+            <div class="card-body">
+
+                <!--Card Title-->
+                <p class="card-title fw-bold" style="text-shadow: 2px 2px 4px black;">Dynamic Execution System</p>
+                <p>A quick video to demonstrate a very simple combat sequence that can occur in Bound Exodus.</p>
+
+
+                <!-- Video -->
+                <div class="d-flex justify-content-center">
+
+                    <video width="800" controls>
+                        <source src="static/videos/Timeline 1.mp4">
+                        Your browser does not support this video.
+                    </video>
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-end">
+                    <a href="https://github.com/ChadAleGD/BoundExodusBuild" target="_blank" class="btn btn-primary end-0 mx-3 mt-4"
+                        style="background-color: white; color: black; border-color: black; border-width: 2px; font-weight: 500;">Learn more on BE Build GitHub</a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--Procedural Generation-->
+        <div class="card mt-5 text-white my-5" style="background-color: rgb(76, 20,128); border-color: rgb(76,20,128);">
+            <div class="card-body">
+
+                <p class="card-title fw-bold" style="text-shadow: 2px 2px 4px black;">Procedural Generation</p>
+                <p>Bound Exodus incorporates elements of procedural generation while the player is out on explorations.</p>
+                <p>Every exploration provides a unique experience each time with new maps generated based on random seeds.</p>
+
+                <p>I (currently am creating) a small C# program to illustrate the procedural generation in a simple ASCII format. This algorithm will
+                    then be taken and translated into Unity's C# API to integrate grid based rooms and traversal between rooms.
+                </p>
+
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-end">
+                    <a href="https://github.com/ChadAleGD/Bound-Exodus-CLI-Procedural-Room-Generator" target="_blank" class="btn btn-primary end-0 mx-3 mt-4"
+                        style="background-color: white; color: black; border-color: black; border-width: 2px; font-weight: 500;">Project GitHub</a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="card mt-5 text-white my-5" style="background-color: rgb(76, 20,128); border-color: rgb(76,20,128);">
+            <div class="card-body">
+
+                <p class="card-title fw-bold" style="text-shadow: 2px 2px 4px black;">AI Logic</p>
+                <p class="fst-italic">This section is still under development</p>
+                <p>The AI in Bound Exodus consists of a few factors that determine the strength of the AI. Based on the AI type or boss (can have unique logic)
+                    will determine what kind of heuristics the combatant will prioritize. There are 3 main category for general units.
+                </p>
+
+                <p>- Grunt</p>
+                <div class="mx-4">
+                    <p>The weakest of the general enemies. This AI category will make near random choices, typically not taking any external factors into account.
+                        This group is by far the easiest to implement as their actions and ability selection is typically erratic and works in a pattern that: focuses
+                        on the ability with the highest index in all available abilities (typically stronger) and then a random target.
+                    </p>
+                </div>
+                <p>- Scout</p>
+                <div class="mx-4">
+                    <p>The next level up from the grunt group of AI's. These AI's will begin to take into account things like health states and status afflictions to determine which abilities
+                        should target which combatants. They will typically try to focus low health targets or try to support the lowest health ally (if a healer). However certain actions will
+                        still not be fully optimal, which adds in for a level of unpredictability with the Scout type AI. This AI will try to create the highest single turn impact that it can.
+                    </p>
+                </div>
+                <p>- Warrior</p>
+                <div class="mx-4">
+                    <p>The strongest general AI group. They will have the most heuristics and AI that is catered to the enemy as an individual, rather than a blanket cover. Things like, health
+                        states, status afflictions, current cooldowns, ability impact, targeting based on highest damage output, and predicting turn count for ally or enemy deaths. The
+                        enemy will then make decisions that will provide the most benefit not only for this turn, but also upcoming turns. Highly specialized scripts will be created for a near
+                        per enemy basis, adding lots of depth to individual enemies. This also means that the rarity of these types of AI will also be significantly higher if not even considered
+                        "mini bosses".
+                    </p>
+                </div>
+
+                <p>Bosses are the final tier of AI. They will be the most complex in every form. They will have deeper analysis of the battle field as well as upcoming turns. They will
+                    inherit many of the same features as the warrior class, however can also include things like "cheats" to create unfair scenarios against the player or special puzzles for
+                    the player to figure out and defeat said boss. Each boss is guaranteed to get their own script and logic to maximize their kit to the full potential.
+                </p>
+
+                <p class="fst-italic">Implementation demonstration will be added here in the future</p>
+
+                <p></p>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+</body>
