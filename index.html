@@ -31,16 +31,14 @@
 
 		<!-- Horizontal Line -->
 		<hr class="navbar-break-bar">
-
 	</header>
 
 
 	<!-- Title -->
-	<div class="container text-white">
+	<div class="container text-white pt-2">
 		<h1>Alexander Chadzynski</h1>
-		<h2>Software and Game Engineer</h2>
-		<h6 class="text-secondary">Systems, Gameplay, and Tooling</h6>
-		</p>
+		<h2>Software and Technical Gameplay Engineer</h2>
+		<h6 class="text-secondary">Systems, Prototyping, Producing</h6>
 	</div>
 
 
@@ -57,7 +55,7 @@
 			<div class="card-body">
 
 				<!-- Texts -->
-				<h5 class="card-title" style="text-shadow: 2px 2px 4px black;">Unity - Bound Exodus</h5>
+				<h5 class="card-title" style="text-shadow: 2px 2px 4px black;">Bound Exodus</h5>
 				<p class="card-text">A turn based combat RPG game driven by a dynamic turn execution system that brings flashy and unique sequences of moves with each turn. A capstone project that has
 					allowed me to express multiple concepts such as procedural generation, AI logic, and turn execution systems. Find out more below and/or download the demo from the GitHub build
 					page.
@@ -70,33 +68,66 @@
 					<a href="bound-exodus.html" class="btn btn-primary end-0 mx-3" style="background-color: white; color: black; border-color: black; border-width: 2px; font-weight: 500;">Learn
 						More</a>
 				</div>
-
 			</div>
 		</div>
 
 
-
-
-
-		<!-- C++ Block Reader and Writer -->
-		<div class="card mb-4 text-white" style="background-color: rgb(76, 20, 128); border-color: rgb(76, 20, 128);">
+		<!-- Pinball -->
+		<div class="card my-4 text-white" style="background-color: rgb(76, 20, 128); border-color: rgb(76, 20, 128);">
 			<div class="card-body">
-				<h5 class="card-title" style="text-shadow: 2px 2px 4px black;">C++ - Block Reader and Writer</h5>
 
-				<p class="card-text">A program that is structured to function as a database read/write pipeline engine. Information is read/written in blocks and pages to reduce overhead I/O cost when
-					performing functions such as lookups. Data is then stored in binary format and can be accessed through the reader again.
+				<!-- Texts -->
+				<h5 class="card-title" style="text-shadow: 2px 2px 4px black;">Pinball</h5>
+				<p class="card-text">A month long prototype sprint to create a pinball game from scratch in Unity. This project includes core pinball features such as bumpers, catch and hold point
+					payouts, drop targets, multipliers, and a black hole area to showcase a prototype sprint using Unitys 3D physics system.
 				</p>
 
-				<div class="d-flex justify-content-end">
-					<a href="https://github.com/ChadAleGD/Database-Block-Reader-Writer" class="btn btn-primary end-0 mx-3" target="_blank"
-						style="background-color: white; color: black; border-color: black; border-width: 2px; font-weight: 500;">
-						GitHub</a>
+				<div class="d-flex justify-content-center pb-4">
+
+					<video width="800" controls>
+						<source src="static/videos/Pinball.mov">
+						Your browser does not support this video.
+					</video>
 				</div>
 
-			</div>
+				<p class="card-text">The goal for this project was to create a complete gameplay loop with polish in as short amount of time as possible.</p>
+				<p class="card-text">The key takeaway from this is learning how to manipulate Unitys 3D physics system in a way that will achieve the desired gameplay feel, while also
+					keeping it in a controlable state for consistent and predictable outcomes.</p>
 
+				<!-- Buttons -->
+				<div class="d-flex justify-content-end">
+					<a href="https://github.com/ChadAleGD/OMP-Pinball" class="btn btn-primary end-0 mx-3" target="_blank"
+						style="background-color: white; color: black; border-color: black; border-width: 2px; font-weight: 500;">GitHub</a>
+				</div>
+			</div>
 		</div>
 
+
+		<!-- Wild West Seduction -->
+		<div class="card my-4 text-white" style="background-color: rgb(76, 20, 128); border-color: rgb(76, 20, 128);">
+			<div class="card-body">
+
+				<!-- Texts -->
+				<h5 class="card-title" style="text-shadow: 2px 2px 4px black;">Producer - Wild West Seduction</h5>
+				<p class="card-text">Wild West Seduction is a narrative driven RPG set in a stylized wild west environment with combat inspired by games such as Persona 5 and DeltaRune.</p>
+
+				<!-- Video -->
+				<div class="d-flex justify-content-center pb-4">
+
+					<video width="800" controls>
+						<source src="static/videos/WWSShowcase.mov">
+						Your browser does not support this video.
+					</video>
+				</div>
+
+
+				<p>
+					During this project I served the role as the producer. My responsibilities included things such as delegating work between team leads, scope control, work documentation, and
+					assisting programmers with gameplay implementation.
+				</p>
+
+			</div>
+		</div>
 
 		<!-- Python - Connect 4 AI -->
 		<div class="card mb-4 text-white" style="background-color: rgb(76, 20, 128); border-color: rgb(76, 20, 128);">
@@ -112,35 +143,8 @@
 						style="background-color: white; color: black; border-color: black; border-width: 2px; font-weight: 500;">
 						GitHub</a>
 				</div>
-
 			</div>
-
 		</div>
-
-
-
-
-		<!-- Python CLI Chatroom -->
-		<div class="card mb-4 text-white" style="background-color: rgb(76, 20, 128); border-color: rgb(76, 20, 128);">
-			<div class="card-body">
-				<h5 class="card-title" style="text-shadow: 2px 2px 4px black;">Python - CLI Chatroom</h5>
-
-				<p class="card-text">Command Line Interface server based chatroom. Allows for users to connect through the servers IP and port. Users with the longest connected time in the server are
-					deemed admins and are allowed to ban or kick members by name.
-				</p>
-
-				<img src="static/img/PythonCLI.PNG" class="img-fluid rounded my-4 mx-auto d-block w-50" alt="Chatroom Example">
-
-				<div class="d-flex justify-content-end">
-					<a href="https://github.com/ChadAleGD/Python-CLI-Chatroom" target="_blank" class="btn btn-primary end-0 mx-3"
-						style="background-color: white; color: black; border-color: black; border-width: 2px; font-weight: 500;">
-						GitHub</a>
-				</div>
-
-			</div>
-
-		</div>
-
 
 
 	</div>
