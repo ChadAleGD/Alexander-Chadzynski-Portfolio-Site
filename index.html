@@ -209,30 +209,10 @@
 				</p>
 
 
-
-
-				<body class="p-4">
-
-					<div class="container">
-						<h5 class="my-3">Student Document</h5>
-						<div id="docx-viewer" class="docx-viewer">
-							<p class="text-muted">Loading document...</p>
-						</div>
-					</div>
-
-					<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
-					<script>
-						fetch('static/docs/Unity Puzzle Script.docx')
-							.then(res => res.arrayBuffer())
-							.then(buf => mammoth.convertToHtml({ arrayBuffer: buf }))
-							.then(result => {
-								document.getElementById('docx-viewer').innerHTML = result.value;
-							})
-							.catch(() => {
-								document.getElementById('docx-viewer').innerHTML =
-									'<p class="text-danger">Could not load document.</p>';
-							});
-					</script>
+				<div class="d-flex justify-content-end">
+					<a href="/static/docs/Unity Puzzle Script.pdf" target="_blank" class="btn btn-primary end-0 mx-3 mt-4"
+						style="background-color: white; color: black; border-color: black; border-width: 2px; font-weight: 500;">Read the Write Up</a>
+				</div>
 
 			</div>
 		</div>
@@ -245,7 +225,8 @@
 
 				<!-- Texts -->
 				<h5 class="card-title" style="text-shadow: 2px 2px 4px black;">Bound Exodus</h5>
-				<p class="card-text">A turn based combat RPG game driven by a dynamic turn execution system that brings flashy and unique sequences of moves with each turn. A capstone project that has
+				<p class="card-text">A turn based combat RPG game driven by a dynamic turn execution system that brings flashy and unique sequences of moves with each turn. A capstone project that
+					has
 					allowed me to express multiple concepts such as procedural generation, AI logic, and turn execution systems. Find out more below and/or download the demo from the GitHub build
 					page.
 				</p>
