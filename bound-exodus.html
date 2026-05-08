@@ -68,70 +68,53 @@
         </div>
 
 
-        <!--Procedural Generation-->
-        <div class="card mt-5 text-white my-5" style="background-color: rgb(76, 20,128); border-color: rgb(76,20,128);">
-            <div class="card-body">
-
-                <p class="card-title fw-bold" style="text-shadow: 2px 2px 4px black;">Procedural Generation</p>
-                <p>Bound Exodus incorporates elements of procedural generation while the player is out on explorations.</p>
-                <p>Every exploration provides a unique experience each time with new maps generated based on random seeds.</p>
-
-                <p>I (currently am creating) a small C# program to illustrate the procedural generation in a simple ASCII format. This algorithm will
-                    then be taken and translated into Unity's C# API to integrate grid based rooms and traversal between rooms.
-                </p>
-
-
-                <!-- Buttons -->
-                <div class="d-flex justify-content-end">
-                    <a href="https://github.com/ChadAleGD/Bound-Exodus-CLI-Procedural-Room-Generator" target="_blank" class="btn btn-primary end-0 mx-3 mt-4"
-                        style="background-color: white; color: black; border-color: black; border-width: 2px; font-weight: 500;">Project GitHub</a>
-                </div>
-
-            </div>
-        </div>
-
 
         <div class="card mt-5 text-white my-5" style="background-color: rgb(76, 20,128); border-color: rgb(76,20,128);">
             <div class="card-body">
 
-                <p class="card-title fw-bold" style="text-shadow: 2px 2px 4px black;">AI Logic</p>
-                <p class="fst-italic">This section is still under development</p>
-                <p>The AI in Bound Exodus consists of a few factors that determine the strength of the AI. Based on the AI type or boss (can have unique logic)
-                    will determine what kind of heuristics the combatant will prioritize. There are 3 main category for general units.
+                <p class="card-title fw-bold" style="text-shadow: 2px 2px 4px black;">Post-Mortem</p>
+                <p>
+                    An ambitious project that growed both in codebase and scope quickly. The genre of the game combined many elements from traditional turn based rpg combat games as well as
+                    autobattlers to create a self playing system of move chains unique to each combat and movesets.
                 </p>
 
-                <p>- Grunt</p>
-                <div class="mx-4">
-                    <p>The weakest of the general enemies. This AI category will make near random choices, typically not taking any external factors into account.
-                        This group is by far the easiest to implement as their actions and ability selection is typically erratic and works in a pattern that: focuses
-                        on the ability with the highest index in all available abilities (typically stronger) and then a random target.
-                    </p>
-                </div>
-                <p>- Scout</p>
-                <div class="mx-4">
-                    <p>The next level up from the grunt group of AI's. These AI's will begin to take into account things like health states and status afflictions to determine which abilities
-                        should target which combatants. They will typically try to focus low health targets or try to support the lowest health ally (if a healer). However certain actions will
-                        still not be fully optimal, which adds in for a level of unpredictability with the Scout type AI. This AI will try to create the highest single turn impact that it can.
-                    </p>
-                </div>
-                <p>- Warrior</p>
-                <div class="mx-4">
-                    <p>The strongest general AI group. They will have the most heuristics and AI that is catered to the enemy as an individual, rather than a blanket cover. Things like, health
-                        states, status afflictions, current cooldowns, ability impact, targeting based on highest damage output, and predicting turn count for ally or enemy deaths. The
-                        enemy will then make decisions that will provide the most benefit not only for this turn, but also upcoming turns. Highly specialized scripts will be created for a near
-                        per enemy basis, adding lots of depth to individual enemies. This also means that the rarity of these types of AI will also be significantly higher if not even considered
-                        "mini bosses".
-                    </p>
-                </div>
+                <p class="pb-3"> This section aims to dive into some of those lessons and how I've documented them to further expand on things that worked well, and what should have been done
+                    differently. </p>
 
-                <p>Bosses are the final tier of AI. They will be the most complex in every form. They will have deeper analysis of the battle field as well as upcoming turns. They will
-                    inherit many of the same features as the warrior class, however can also include things like "cheats" to create unfair scenarios against the player or special puzzles for
-                    the player to figure out and defeat said boss. Each boss is guaranteed to get their own script and logic to maximize their kit to the full potential.
-                </p>
 
-                <p class="fst-italic">Implementation demonstration will be added here in the future</p>
+                <h5>What Worked:</h5>
+                <ul class="pb-3">
+                    <li>Project vision was deeply defined and documented in terms of background and overall desgin.</li>
+                    <li>Ideas were developed through and through with consideration into how players would feel when playing and if gameplay made sense throughout the main loop.</li>
+                    <li>The main incentive to play was very clear and compelling to explore what kind of combinations were possible.</li>
+                    <li>Code was constantly being refactored and improved upon learning better ways to handle tasks. The importance of leaving as little technical debt as possible was
+                        my one of my biggest concerns and focuses to keep code extensible. </li>
+                </ul>
 
-                <p></p>
+
+                <h5>What Didn't Work:</h5>
+                <ul class="pb-3">
+                    <li>The project throughout its lifetime went through a number of different iterations and changes. Shifting between different genres, themes, and platforms. With a limited amount
+                        of time to work on the project, the projects initial design was not fully fleshed out and defined, leading to a lot of time being spent on defining the identity of the game.
+                    </li>
+                    <li>With the above in mind, the project with each iteration required some or maybe even all parts of the codebase to be rebuilt with new mechanics in mind. This style of
+                        development led to scenarios where I'd often find myself taking one step forward, then two steps back.
+                    </li>
+                    <li>Project scope was always kept in mind. That being said, without a proper anchor or reference point to keep myself grounded to, it became difficult to discern what elements
+                        were necessary to the core experience as well as what was in desperate need of being worked on.
+                    </li>
+                </ul>
+
+
+                <h5>Future Changes:</h5>
+                <ul>
+                    <li>Milestone-based development is not enough. There needs to be a significant weight placed on the production timeline and ensure that things are worked on in order of priority.
+                        This prevents workflow from being frantic and unorganized based on whatever feels right in the moment. </li>
+                    <li>Documenting at least once a week on the biggest tasks accomplished as well as the biggest problems unearthed shouldn't be treated as a side project, but directly part of the
+                        production pipeline.</li>
+                    <li>Accountability or feedback on scope should have been something I seeked out more often, letting the imagination run wild without direction can lead to quicker burnouts.</li>
+                </ul>
+
             </div>
         </div>
 
